@@ -1,0 +1,36 @@
+{% extends "vis_base.html" %}
+{% from "_render_elements.html" import render_input %}
+{% block title %}
+Inicio de Sesión - Docente
+{% endblock %}
+
+
+<!-- voy por aqui (del login me manda pal registro, i don't understand) -->
+{% block content %}        
+	<form method="post" action="{{ url_for('login') }}" class="container container_login">
+		
+        <div class="titulo titulo_login">
+			<h2>Inicio de Sesión - Docente</h2>
+		</div>
+
+		<div class="grid_item">
+            {{ render_input("Usuario", "Usuario/Cédula", type="number") }}
+        </div>
+        
+        <div class="grid_item">
+            {{ render_input("Contraseña", "Contraseña", type="password") }}
+        </div>
+
+        <div>
+			<a href=" {{ url_for('recovery') }} " class="olvidoRegistro">Olvidaste tu Contraseña</a>
+		</div>
+		<div>
+			<a href="{{ url_for('signup') }}" class="olvidoRegistro">Registrarse</a>
+		</div>
+
+		<div>
+			<input class="boton" type="submit" value="INICIAR SESIÓN">
+		</div>	
+	</form>
+{% endblock %}
+

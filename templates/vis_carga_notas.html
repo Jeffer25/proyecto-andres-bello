@@ -1,0 +1,116 @@
+{% extends "vis_base.html" %}
+
+{% block title %}
+    Carga de Notas
+{% endblock %}
+
+<!-- Seguir implementando la carga de notas (va a estar rudo) -->
+{% block content %}
+    <table class="notas">
+        <thead>
+            <tr>
+                <th >Nombre y Apellido</th>
+                <th >1er lapso</th>
+                <th >2do lapso</th>
+                <th >3er lapso</th>
+                <th>final</th>
+            </tr>
+            
+        </thead>
+    </tbody>
+        
+ 
+               <tr>
+                    <td>Casimiro Rodriguez</td>
+                    <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>          
+                </tr> 
+                <tr>
+                    <td>Jeferson Oramas</td>
+                    <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>
+                </tr>
+                <tr>
+                    <td>Shania Gomez</td>
+                    <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>
+                </tr>
+                <tr>
+                    <td>Alexandra Dorante</td>
+                    <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>
+                </tr>
+            
+                <tr>
+                    <td>Jenny Rojas</td>
+                  <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>
+                </tr>
+                <tr>
+                    <td>Sherry Khan</td>
+                   <td> <input class="input_nota" type="number" placeholder="1era nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="2da nota" required></td> 
+                    <td> <input class="input_nota" type="number" placeholder="3era nota" required></td>
+                </tr>
+                
+        </tbody>
+
+    </table>
+
+    <div class="grid_item boton_validar1">
+        <a class="descarga" href="#">DESCARGAR</a>
+    </div>
+{% endblock %}
+
+<!DOCTYPE html>
+<lang="es">
+<head>
+    <title>notas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/09461f46a0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="cabecera">
+            <div>
+                <img src="../imagenes/logo_colegio_andres_bello.jpg" class="logo logo_colegio">
+            </div>
+            <div>
+                <h2 class="titulo_colegio">U.E.M. "ANDRES BELLO"</h2>
+            </div>
+            
+            <div>
+                <img src="../imagenes/logo_alcaldia_de_chacao.png" class="logo logo_alcaldia">
+            </div>
+        </div>
+    </header>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="material-icons" id="btn">apps</i>
+        <i id="cancel">&times;</i>
+    </label>
+    
+    <div class="sidebar">
+        <section>U.E.M."Andres Bello"</section>
+        <ul>
+            <li class="selected"><a href="vis_index.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li ><a href="vis_consultarTodosEstudiantes.html"><i class="fas fa-user-tie"></i>Consulta de Estudiantes</a></li>
+            <li><a href="vis_carga_notas.html"><i class="fa-solid fa-upload"></i>Cargar Notas</a></li>
+        </ul>
+    </div>
+
+
+        
+</body>
+
+</html>

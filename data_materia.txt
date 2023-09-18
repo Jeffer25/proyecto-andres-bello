@@ -1,0 +1,10 @@
+cast10,Castellano,12345
+ing10,Inglés,12345
+mat10,Matemática,54321
+edufis10,Educación Física,54321
+artpa10,Arte y Patrimonio,6789
+ciennat10,Ciencias Naturales,6789
+ghc10,Geografía Historia y Ciudadanía,9876
+fis10,Física,9876
+qui10,Química,12345
+bio10,Biología,54321

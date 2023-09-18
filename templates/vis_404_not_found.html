@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}
+        <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}">
+        <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://kit.fontawesome.com/09461f46a0.js" crossorigin="anonymous"></script>
+    {% endblock %}
+</head>
+<body>
+
+    <header>
+        <div class="cabecera">
+            <div>
+                <img src="../static/imgs/logo_colegio_andres_bello.jpg" class="logo logo_colegio">
+            </div>
+            <div>
+                <h2 class="titulo_colegio">U.E.M. "ANDRES BELLO"</h2>
+            </div>
+            
+            <div>
+                <img src="../static/imgs/logo_alcaldia_de_chacao.png" class="logo logo_alcaldia">
+            </div>
+        </div>
+    </header>
+    
+    <div class="not_found">
+        <h1>Página no encontrada</h1>
+    </div>
+
+    <div class="boton_inicio">
+        <a href="{{url_for('home')}}">Ir al inicio</a>
+    </div>
+
+   
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
+

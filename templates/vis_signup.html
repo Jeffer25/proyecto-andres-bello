@@ -1,0 +1,46 @@
+{% extends "vis_base.html" %}
+{% from "_render_elements.html" import render_input %}
+{% block title %}
+Registro de Docente
+{% endblock %}
+
+
+{% block content %}        
+		<form method="post" action="{{ url_for('signup') }}" class="container container_registro">
+            {{forma.csrf_token}}
+
+            <div class="titulo titulo_registro">
+                <h2>Registro de usuario Docente</h2>
+            </div>
+
+            <div class="grid_item">
+                {{ forma.username }}
+            </div>
+            
+            <div class="grid_item">
+                {{ forma.password }}
+            </div>
+            
+
+            <div class="grid_item">
+                {{ forma.names }}
+            </div>
+
+            <div class="grid_item">
+                {{ forma.lastnames }}
+            </div>
+
+            <div class="grid_item">
+                {{ forma.email }}
+            </div>
+
+            <div class="grid_item">
+                {{ forma.phone }}
+            </div>      
+            
+            <div class="grid_item boton_validar">
+                {{forma.submit(class="boton btn btn-primary")}}
+            </div>
+
+		</form>
+{% endblock %}

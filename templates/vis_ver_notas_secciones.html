@@ -1,0 +1,61 @@
+{% extends "vis_base.html" %} {% block title %} Ver Notas {% endblock
+%}
+
+<!-- Seguir implementando la carga de notas (va a estar rudo) -->
+{% block content %}
+<div class="container">
+	<div class="titulo">
+		<h2>Ver Notas - Año y Sección</h2>
+	</div>
+
+	<div id="menu">
+		<input
+			type="checkbox"
+			id="responsive-menu"
+			onclick="updatemenu()"
+		/><label></label>
+		<ul>
+			<li>
+				<a class="dropdown-arrow">1er año</a>
+				<ul class="sub-menus">
+					{% for grado in grado_seccion %} {%if loop.index <= 3 %}
+					<li>
+						<a
+							href="ver_notas_secciones/{{grado.cod_grado_seccion}}/ver_notas_materias"
+							>{{ grado }}</a
+						>
+					</li>
+					{%endif%} {% endfor %}
+				</ul>
+			</li>
+			<li>
+				<a class="dropdown-arrow">2do año</a>
+				<ul class="sub-menus">
+					{% for grado in grado_seccion %} {%if loop.index > 3 and
+					loop.index <= 6 %}
+					<li>
+						<a
+							href="ver_notas_secciones/{{grado.cod_grado_seccion}}/ver_notas_materias"
+							>{{ grado }}</a
+						>
+					</li>
+					{%endif%} {% endfor %}
+				</ul>
+			</li>
+			<li>
+				<a class="dropdown-arrow">3er año</a>
+				<ul class="sub-menus">
+					{% for grado in grado_seccion %} {%if loop.index > 6 %}
+					<li>
+						<a
+							href="ver_notas_secciones/{{grado.cod_grado_seccion}}/ver_notas_materias"
+							>{{ grado }}</a
+						>
+					</li>
+					{%endif%} {% endfor %}
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}

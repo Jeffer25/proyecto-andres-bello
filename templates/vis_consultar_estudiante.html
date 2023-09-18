@@ -1,0 +1,127 @@
+{% extends "vis_base.html" %}
+{% block title %}
+Consulta de estudiante - Docente
+{% endblock %}
+
+
+{% block content %}
+<div class=" titulo titulo_estudiante">
+    <h2>INFORMACIÓN GENERAL</h2>
+</div>
+
+<table class="notas">
+    <tr>
+        <th colspan="2">Correo</th>
+        <th colspan="2">Responsable de Inscripciòn</th>    
+    </tr>
+    <tr>
+        <td colspan="2">{{estudiante.email_estud}}</td>
+        <td colspan="2">{{estudiante.responsable}}</td>
+    </tr>
+
+    <tr>
+        <th>Año y sección a cursar</th>
+        <th>Tipo de Inscripción:</th>
+        <th colspan="2">Antecedente Escolar</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.grado_seccion}}</td>
+        <td>{{estudiante.tipo_inscrip}}</td>
+        <td colspan="2">{{estudiante.antecedente_escolar}}</td>
+    </tr>
+
+    <tr>
+        <th>Nombres:</th>
+        <th>Apellidos:</th>
+        <th colspan="2">Cédula Identidad / Escolar</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.nombres}}</td>
+        <td>{{estudiante.apellidos}}</td>
+        <td colspan="2">V-{{estudiante.cedula}}</td>
+    </tr>
+
+    <tr>
+        <th>Género</th>
+        <th>Nacionalidad del Estudiante</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Lugar de Nacimiento</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.genero}}</td>
+        <td>{{estudiante.nacionalidad}}</td>
+        <td>{{estudiante.fecha_naci}}</td>
+        <td>{{estudiante.lugar_naci}}</td>
+    </tr>
+
+    <tr>
+        <th>Edad</th>
+        <th>Lateralidad</th>
+        <th>Peso</th>
+        <th>Estatura</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.edad}}</td>
+        <td>{{estudiante.lateralidad}}</td>
+        <td>{{estudiante.peso}}Kg</td>
+        <td>{{estudiante.estatura}}m</td>
+    </tr>
+
+    <tr>
+        <th>Talla - Camisa/Franela</th>
+        <th>Talla - Pantalón/Mono</th>
+        <th>Estado de Salud</th>
+        <th>Parto simple o múltiple</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.talla_camisa}}</td>
+        <td>{{estudiante.talla_pantalon}}</td>
+        <td>{{estudiante.salud}}</td>
+        <td>{{estudiante.parto}}</td>
+    </tr>
+
+    <tr>
+        <th>Hermanos</th>
+        <th>Hermanos en la institución</th>
+        <th>Padeció Covid</th>
+        <th>Vacunas aplicadas</th>
+    </tr>
+
+    <tr>
+        <td>{{estudiante.hermanos}}</td>
+        <td>{{estudiante.hermanos_inst}}</td>
+        <td>{{estudiante.covid}}</td>
+        <td>{{estudiante.vacunas_covid}}</td>
+    </tr>
+
+    <tr>
+        <th colspan="2">Correo del estudiante</th>
+        <th colspan="2">Redes Sociales</th>
+    </tr>
+    <tr>
+        <td colspan="2">{{estudiante.email_estud}}</td>
+        <td colspan="2">{{estudiante.redes_soc}}</td>
+    </tr>
+
+    <tr>
+        <th>Equipos tecnológicos disponibles</th>
+        <th>Posee Canaimita</th>
+        <th colspan="2">Acceso a Internet:</th>
+    </tr>
+    <tr>
+        <td>{{estudiante.equipo_tecn}}</td>
+        <td>{{estudiante.canaima}}</td>
+        <td colspan="2">{{estudiante.acceso_inter}}</td>
+    </tr>
+</table>
+
+<div class="boton_validar_es grid_item">
+    <a class="boton" href="../modificar_estudiante/{{estudiante.cedula}}">Modificar Estudiante</a>
+</div>
+
+<div class="boton_validar_es grid_item">
+    <a class="boton" href="{{url_for('consultar_estudiantes')}}">Regresar</a>
+</div>
+
+{% endblock %}
+

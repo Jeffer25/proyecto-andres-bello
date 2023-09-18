@@ -1,0 +1,36 @@
+{% extends "vis_base.html" %}
+
+{% block title %}
+	Cargar Notas de Estudiantes - Docente
+{% endblock %}
+
+{% block content %}
+	{# Colocar este codigo de abajo en la nueva vista llamada "vis_cargar_notas/{{estudiante.cedula}}" #}	
+		<table class="notas">
+			<thead>
+				<tr>
+					<th >Nombre y Apellido</th>
+					<th >1er Momento</th>
+					<th >2do Momento</th>
+					<th >3er Momento</th>
+                    <th>Acumulado</th>
+					<th>codigo materia</th>
+				</tr>
+			</thead>
+			</tbody>
+				{% for nota in notas %}	
+					{% for estudiante in estudiantes %}
+					<tr>
+						<td>{{estudiante.nombres}} {{estudiante.apellidos}}</td>
+						<td> {{ nota.nota_1er_lapso }} </td> 
+						<td> {{ nota.nota_2do_lapso }} </td> 
+						<td> {{ nota.nota_3er_lapso }} </td>
+						<th>{{ nota.promedio }}</th>
+						<th>{{ nota.materia.cod_materia}}</th>
+					</tr> 
+					{% endfor %}         
+				{% endfor %}
+			</tbody>
+		</table>
+
+{% endblock %}

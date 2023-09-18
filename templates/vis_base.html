@@ -1,0 +1,107 @@
+{% from "_render_elements.html" import render_messages %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>{% block title %}{% endblock %}</title>
+		{% block styles %}
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='imgs/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<script
+			src="https://kit.fontawesome.com/09461f46a0.js"
+			crossorigin="anonymous"
+		></script>
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<div class="cabecera">
+				<div>
+					<img
+						src="../static/imgs/logo_colegio_andres_bello.jpg"
+						class="logo logo_colegio"
+					/>
+				</div>
+				<div>
+					<h2 class="titulo_colegio">U.E.M. "ANDRES BELLO"</h2>
+				</div>
+
+				<div>
+					<img
+						src="../static/imgs/logo_alcaldia_de_chacao.png"
+						class="logo logo_alcaldia"
+					/>
+				</div>
+			</div>
+		</header>
+
+		{% if g.user %}
+		<input type="checkbox" id="check" />
+		<label for="check">
+			<img
+				id="btn"
+				src="{{ url_for('static', filename='imgs/menu_icon.png') }}"
+			/>
+			<img
+				id="cancel"
+				src="{{ url_for('static', filename='imgs/cancel.png') }}"
+			/>
+		</label>
+
+		<div class="sidebar">
+			<section>U.E.M."Andres Bello"</section>
+			<ul>
+				<li>
+					<a href="{{url_for('home')}}"
+						><i class="fas fa-home"></i>Inicio</a
+					>
+				</li>
+				<li>
+					<a href="{{url_for('registrar_representante')}}"
+						><i class="fas fa-user-tie"></i>Agregar Estudiante</a
+					>
+				</li>
+				<li>
+					<a href="{{url_for('consultar_estudiantes')}}"
+						><i class="fas fa-user-tie"></i>Consultar Estudiantes</a
+					>
+				</li>
+				<li>
+					<a href="{{url_for('cargar_notas_secciones')}}"
+						><i class="fa-solid fa-upload"></i>Cargar Notas</a
+					>
+				</li>
+				<li>
+					<a href="{{url_for('ver_notas_secciones')}}"
+						><i class="fa-solid fa-upload"></i>Ver Notas</a
+					>
+				</li>
+				<li>
+					<a href=" {{ url_for('logout') }} "
+						><i class="fa-solid fa-arrow-right-from-bracket"></i
+						>Cerrar Sesión</a
+					>
+				</li>
+			</ul>
+		</div>
+		{% endif %} {{ render_messages(messages) }} {% block content %} {%
+		endblock %}
+
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>

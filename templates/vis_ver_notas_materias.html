@@ -1,0 +1,20 @@
+{% extends 'vis_base.html' %} {% block title %} Ver Notas por Materia
+- Docente {% endblock %} {% block content %}
+<div class="container">
+	<div class="titulo">
+		<h2>Ver Notas - Materias</h2>
+	</div>
+	<div class="container_materias">
+		{% for materia in materias %}
+		<div>
+			<a
+				href="ver_notas_materias/{{materia.cod_materia}}"
+				class="boton_materias"
+				>{{materia.nom_materia}}</a
+			>
+		</div>
+
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

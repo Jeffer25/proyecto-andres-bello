@@ -1,0 +1,145 @@
+{% extends "vis_base.html" %}
+
+{% block title %}
+    Agregar Representante - Docente
+{% endblock %}
+
+<!-- FALTA AGREGAR LA VISTA DE AGREGAR REPRESENTANTE -->
+
+{% block content %}
+    <form action="" method="post" class="container container_representantes">
+        {{formaRep.csrf_token}}
+        
+        <div class=" titulo titulo_representante">
+            <h2>Representante</h2>
+        </div>
+        
+        <div class="grid_item">
+            {{formaRep.nombre}}
+        </div>
+        
+        <div class="grid_item">
+            {{formaRep.apellido}}
+        </div>
+        
+        <div class="grid_item">
+            <select name="{{formaRep.nacionalidad.name}}" id="{{formaRep.nacionalidad.id}}">
+                {% for option in formaRep.nacionalidad %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                            {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select> 
+        </div>
+        
+        <div class="grid_item">
+            {{formaRep.cedula}}
+        </div>
+        
+        <div class="grid_item">
+            <select name="{{formaRep.parentesco.name}}" id="{{formaRep.parentesco.id}}">
+                {% for option in formaRep.parentesco %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                            {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select> 
+        </div>
+    
+        <div class="grid_item">
+            {{formaRep.lugar_naci}}
+        </div>
+
+        <div class="grid_item">
+            {{formaRep.telefono}}
+        </div>
+
+        <div class="grid_item">
+            {{formaRep.telefono_alt}}
+        </div>
+
+        <div class="grid_item">
+            {{formaRep.profesion}}
+        </div>
+
+        <div class="grid_item">
+            {{formaRep.telefono_trab}}
+        </div>
+
+        <div class="grid_item">
+            {{formaRep.direccion_trab}}
+        </div>
+
+        <div class="grid_item">
+            <select name="{{formaRep.vive_chacao.name}}" id="{{formaRep.vive_chacao.id}}">
+                {% for option in formaRep.vive_chacao %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                        {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="grid_item">
+            {{formaRep.direccion_dom}}
+        </div>
+
+        <div class="grid_item">
+            <select name="{{formaRep.estado_viv_infra.name}}" id="{{formaRep.estado_viv_infra.id}}">
+                {% for option in formaRep.estado_viv_infra %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                        {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="grid_item">
+            <select name="{{formaRep.estado_viv_tipo.name}}" id="{{formaRep.estado_viv_tipo.id}}">
+                {% for option in formaRep.estado_viv_tipo %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                        {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="grid_item">
+            <select name="{{formaRep.estado_viv_cond.name}}" id="{{formaRep.estado_viv_cond.id}}">
+                {% for option in formaRep.estado_viv_cond %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                        {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="grid_item">
+            <select name="{{formaRep.resolucion_0.name}}" id="{{formaRep.resolucion_0.id}}">
+                {% for option in formaRep.resolucion_0 %}
+                    {% if loop.first %}
+                        <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                    {% else %}
+                        {{option}}
+                    {% endif %}    
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="grid_item boton_validar">
+            {{formaRep.submit(class="boton")}}
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,234 @@
+{% extends "vis_base.html" %}
+
+{% block title %}
+    Modificar Estudiante - Docente
+{% endblock %}
+
+{% block content %}
+
+<form action="" method="post" class="container container_estudiantes">
+    {{formaEst.csrf_token}}
+
+    <div class=" titulo titulo_estudiante">
+        <h2>Estudiante</h2>
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.cedula}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.responsable}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.curso.name}}" id="{{formaEst.curso.id}}">
+            {% for option in formaEst.curso %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.tipo_inscrip.name}}" id="{{formaEst.tipo_inscrip.id}}">
+            {% for option in formaEst.tipo_inscrip %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select>    
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.antecedente_escolar}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.nombres}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.apellidos}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.genero.name}}" id="{{formaEst.genero.id}}">
+            {% for option in formaEst.genero %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.nacionalidad.name}}" id="{{formaEst.nacionalidad.id}}">
+            {% for option in formaEst.nacionalidad%}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.fecha_naci.label}}
+        {{formaEst.fecha_naci}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.lugar_naci}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.parto.name}}" id="{{formaEst.parto.id}}">
+            {% for option in formaEst.parto %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.edad}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.lateralidad.name}}" id="{{formaEst.lateralidad.id}}">
+            {% for option in formaEst.lateralidad %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.peso}}
+    </div> 
+    
+    <div class="grid_item">
+        {{formaEst.estatura}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.hermanos}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.hermanos_inst}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.talla_camisa.name}}" id="{{formaEst.talla_camisa.id}}">
+            {% for option in formaEst.talla_camisa%}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.talla_pantalon.name}}" id="{{formaEst.talla_pantalon.id}}">
+            {% for option in formaEst.talla_pantalon %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.salud}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.covid}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.vacunas_covid.name}}" id="{{formaEst.vacunas_covid.id}}">
+            {% for option in formaEst.vacunas_covid %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.atencion_espec}}
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.email_estud}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.equipo_tecn.name}}" id="{{formaEst.equipo_tecn.id}}">
+            {% for option in formaEst.equipo_tecn %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.acceso_inter.name}}" id="{{formaEst.acceso_inter.id}}">
+            {% for option in formaEst.acceso_inter %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+
+    <div class="grid_item">
+        {{formaEst.redes_soc}}
+    </div>
+
+    <div class="grid_item">
+        <select name="{{formaEst.canaima.name}}" id="{{formaEst.canaima.id}}">
+            {% for option in formaEst.canaima %}
+                {% if loop.first %}
+                    <option value="{{option.data}}" selected disabled>{{option.data}}</option>
+                {% else %}
+                        {{option}}
+                {% endif %}    
+            {% endfor %}
+        </select> 
+    </div>
+    
+    <div class="grid_item boton_validar">
+        {{formaEst.submit(class="boton", value="Modificar Estudiante")}}
+    </div
+</form>
+
+{% endblock %}

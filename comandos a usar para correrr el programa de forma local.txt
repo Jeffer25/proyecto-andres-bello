@@ -1,0 +1,36 @@
+primero instalar postgresql y python en el sistema
+
+
+1. python -m venv entorno_virtual  (se realiza la primera vez:)
+para correr python en un entorno virtual
+
+2. entorno_virtual\Scripts\activate
+para ejecutar el entorno virtual
+
+3. python -m pip install -r requierements.txt (se realiza la primera vez:)
+para instalar las herramientas automaticamente que que estan en el archivo 
+requierements.txt
+
+4. flask db init (se realiza la primera vez)
+esto se ejecuta la primera vez para inicializar las migraciones e implementar las
+tablas a la base de datos
+
+5. flask db stamp head (se realiza la primera vez:)
+para verificar que no haya inconvenientes con la base de datos 
+
+6. flask db migrate (se realiza la primera vez:)
+para agregar las tablas a la base de datos
+
+7. flask db upgrade (se realiza la primera vez:)
+para guardar y/o actualizar los cambios implementados
+
+8. flask run
+para correr el aplicativo
+
+
+para uso cotidiano:
+1. entorno_virtual\Scripts\activate.ps1
+para ejecutar el entorno virtual
+
+1. flask run
+para correr el aplicativo

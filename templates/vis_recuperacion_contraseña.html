@@ -1,0 +1,58 @@
+{% extends "vis_base.html" %}
+{% from "_render_elements.html" import render_input %}
+{% block title %}
+Recuperacion de contraseña - Docente
+{% endblock %}
+
+
+<!-- voy por aqui (del login me manda pal registro, i don't understand) -->
+{% block content %}        
+		<form method="post" action="{{ url_for('recovery') }}" class="container container_recuperacion">
+            <div class="titulo titulo_recuperacion">
+				<h2>Recuperacion de contraseña - Docente</h2>
+			</div>
+
+			<div class="grid_item">
+                {{ render_input("Usuario", "Usuario/Cédula", type="number") }}
+            </div>
+            
+            <div class="grid_item">
+                {{ render_input("Correo", "Correo", type="email") }}
+            </div>
+
+			<div>
+				<input class="boton" type="submit" value="RECUPERAR">
+			</div>	
+		</form>
+{% endblock %}
+
+
+
+    <form action="" class="container container_recuperacion">
+        <div class="titulo titulo_recuperacion">
+            <h2>Recuperación de Contraseña</h2>
+        </div>
+
+        <div>
+            <input
+                type="number"
+                name="Usuario"
+                placeholder="Usuario/Cédula"
+                required
+            />
+        </div>
+        <div>
+            <input
+                type="email"
+                name="email"
+                placeholder="Correo Electrónico"
+                required
+            />
+        </div>
+
+        <div>
+            <input class="boton" type="submit" value="RECUPERAR">
+        </div>
+    </form>
+</body>
+</html>

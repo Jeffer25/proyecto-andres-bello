@@ -1,0 +1,45 @@
+{% extends "vis_base.html" %} {% block title %} Consultar Estudiantes
+- Docente {% endblock %} {% block content %}
+<div class="consulta_estudiante">
+	<input
+		class="buscar"
+		placeholder="Busqueda de estudiante"
+		type="text"
+	/>
+</div>
+
+<table id="customers">
+	<thead>
+		<tr>
+			<th>Nombres</th>
+			<th>Apellidos</th>
+			<th>Cédula Identidad / Escolar</th>
+			<th>Grado y Sección</th>
+			<th>Fecha de Nacimiento</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for estudiante in estudiantes %}
+		<tr>
+			<td>{{estudiante.nombres}}</td>
+			<td>{{estudiante.apellidos}}</td>
+			<td>{{estudiante.cedula}}</td>
+			<td>{{estudiante.grado_seccion}}</td>
+			<td>{{estudiante.fecha_naci}}</td>
+			<td>
+				<li>
+					<a href=" consultar_estudiante/{{estudiante.cedula}}"
+						><img
+							src="{{ url_for('static', filename='imgs/eye.png') }}"
+							class="icon_eye"
+					/></a>
+				</li>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}
