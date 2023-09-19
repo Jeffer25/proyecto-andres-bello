@@ -8,14 +8,14 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 
 # Configuración de la base de datos
-USER_DB = 'postgres'
-PASS_DB = '3006'
-URL_DB = 'localhost'
-NAME_DB = 'pab_db'
-FULL_URL_DB = f'postgresql://{USER_DB}:{PASS_DB}@{URL_DB}/{NAME_DB}'
+USER_DB = "postgres"
+PASS_DB = "admin"
+URL_DB = "localhost"
+NAME_DB = "pab_db"
+FULL_URL_DB = f"postgresql://{USER_DB}:{PASS_DB}@{URL_DB}/{NAME_DB}"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = FULL_URL_DB
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = FULL_URL_DB
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
 
@@ -24,7 +24,7 @@ migrate = Migrate()
 migrate.init_app(app, db)
 
 # Configuración de flask-wtf
-app.config['SECRET_KEY'] = 'Mi_llave_secreta'
+app.config["SECRET_KEY"] = "Mi_llave_secreta"
 
 from controlador.con_home import *
 from controlador.con_login import *
@@ -52,9 +52,9 @@ def before_request():
         g.user = None
 
 
-@app.route('/recuperacionContraseña', methods=["GET", "POST"])
+@app.route("/recuperacionContraseña", methods=["GET", "POST"])
 def recovery():
-    return render_template('vis_recuperacion_contraseña.html')
+    return render_template("vis_recuperacion_contraseña.html")
 
 
 # Pasar esto al controlador y eliminarlo de aqui

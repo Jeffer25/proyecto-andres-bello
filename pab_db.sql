@@ -84,6 +84,8 @@ values ('20','ciennat10','13');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
 values ('21','ghc10','13');
 
+
+
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
 values ('22','cast10','21');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
@@ -132,17 +134,47 @@ values ('42','ghc10','23');
 
 
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('29','cast10','22');
+values ('43','cast10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('30','ing10','22');
+values ('44','ing10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('31','mat10','22');
+values ('45','mat10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('32','edufis10','22');
+values ('46','edufis10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('33','artpa10','22');
+values ('47','fis10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('34','ciennat10','22');
+values ('48','qui10','31');
 insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
-values ('35','ghc10','22');
+values ('49','bio10','31');
+
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('50','cast10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('51','ing10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('52','mat10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('53','edufis10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('54','fis10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('55','qui10','32');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('56','bio10','32');
+
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('57','cast10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('58','ing10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('59','mat10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('60','edufis10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('61','fis10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('62','qui10','33');
+insert into imparte(cod_imparte, cod_materia, cod_grado_seccion)
+values ('63','bio10','33');
 
