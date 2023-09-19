@@ -34,3 +34,6 @@ para ejecutar el entorno virtual
 
 1. flask run
 para correr el aplicativo
+
+para correr la aplicacion en modo debug:
+$env:FLASK_DEBUG=1  -------------> 1 = debug on | 0 = debug off.
